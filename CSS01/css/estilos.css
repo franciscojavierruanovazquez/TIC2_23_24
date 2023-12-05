@@ -1,0 +1,39 @@
+a,p {
+    font-size: 14px;
+}
+
+div a {
+    color: red;
+}
+
+div#capa1 {
+    background: blue;
+}
+
+.estiloLetra {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.noSubrayado {
+    text-decoration: none;
+}
+
+div#capa1 a.encima:hover {
+    background-color: yellow;
+}
+
+p#miparrafo::first-letter {
+    color: blue;
+    font-size: 50px;
+}
+
+p#miparrafo::first-line {
+    color: chocolate;
+}
+
+div#capa1 * {
+    font-style: italic;
+}
+

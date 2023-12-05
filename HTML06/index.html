@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+
+    <script>
+        function pasarAMayus(campoNombre) {
+            campoNombre.value = campoNombre.value.toUpperCase();
+        }
+
+        function contar(campoDescripcion) {
+            var longitud = campoDescripcion.value.length;
+            document.getElementById("mensaje").innerHTML = "Longitud texto: " + longitud;
+        }
+    </script>
+
+</head>
+<body>
+    <div style="margin: 0px auto; width: 600px;">
+        <h3>Formulario</h3>
+        <form action="registro.php" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre</label>
+                    </td>
+                    <td>
+                        <input type="text" name="nombre" id="nombre" 
+                            size="50" maxlength="30" 
+                            placeholder="Nombre de la persona" value="Defecto" 
+                            onkeyup="pasarAMayus(this)"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="apellidos">Apellidos</label>
+                    </td>
+                    <td>
+                        <input type="text" name="apellidos" id="apellidos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Contraseña</label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pregunta">¿Mayor de Edad?</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="pregunta" id="pregunta" value="s" checked>Sí
+                        <input type="radio" name="pregunta" id="pregunta" value="n">No
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="aficiones">Aficiones</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="deportes" id="deportes" value="d">Deportes
+                        <input type="checkbox" name="cine" id="cine" value="c" checked>Cine
+                        <input type="checkbox" name="viajar" id="viajar" value="v">Viajar
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="provincias">Provincias</label>
+                    </td>
+                    <td>
+                        <select name="provincias" id="provincias">
+                            <option value="-1" selected>Seleccione Provincia</option>
+                            <option value="sev">Sevilla</option>
+                            <option value="mal">Málaga</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fichero">Foto</label>
+                    </td>
+                    <td>
+                        <input type="file" name="foto" id="foto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="descripcion">Descripción</label>
+                    </td>
+                    <td>
+                        <textarea name="descripcion" id="descripcion" rows="5" cols="30" maxlength="40" onkeyup="contar(this)"></textarea>
+                        <span style="color: red;" id="mensaje"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="edad">Edad</label>
+                    </td>
+                    <td>
+                        <input type="number" name="edad" id="edad" step="0.5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="correo">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="correo" id="correo">
+                        <input type="url" name="web" id="web">
+                        <input type="tel" name="telefono" id="telefono">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fechas">Fechas</label>
+                    </td>
+                    <td>
+                        <input type="date">
+                        <input type="datetime">
+                        <input type="datetime-local">
+                        <input type="month">
+                        <input type="time">
+                        <input type="week">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar Formulario">
+                    </td>
+                </tr>
+                
+            </table>            
+        </form>
+    </div>
+</body>
+</html>

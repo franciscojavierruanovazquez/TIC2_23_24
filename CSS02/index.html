@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA</title>
+
+    <style type="text/css">
+        @media only screen and (max-width: 1500px) and (min-width:547px) {
+            body {
+                background-color: blue;
+            }
+            p {
+                font-size: xx-large;
+                color: white;
+            }
+        }
+        @media only screen and (max-width: 794px) and (min-width:547px) {
+            body {
+                background-color: red;
+            }
+            p {
+                font-size: medium;
+                color: black;
+            }
+        }
+        @media only screen and (max-width: 547px) {
+            body {
+                background-color: green;
+            }
+            p {
+                font-size: xx-small;
+                color: yellow;
+            }
+        }
+        @media print {
+            * {
+                font-family: monospace;
+            }
+        }
+        @media all and (orientation: landscape) {
+            span {
+                font-style: italic;
+            }
+        }
+        @media all and (orientation: portrait) {
+            span {
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>INICIO</p>
+    <span>TEXTO DE LA PÁGINA</span>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script type="text/javascript" src="js/funciones.js"></script>
+</head>
+<body>
+    <h2>Calcular IMC</h2>
+    <table>
+        <tr>
+            <td>
+                <label for="peso">Peso</label>
+            </td>
+            <td>
+                <input type="number" name="peso" id="peso" autofocus>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="altura">Altura</label>
+            </td>
+            <td>
+                <input type="number" name="altura" id="altura">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Calcular" onclick="calcularIMC()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="resultado"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
